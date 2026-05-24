@@ -59,7 +59,7 @@ Hiển thị thống kê tổng quan về sinh viên trong hệ thống dưới 
 ### 4. Form Quản Lý Điểm *(Phạm Huy Hùng)*
 Cho phép nhập và quản lý điểm của sinh viên theo từng môn học. Giao diện chia đôi: khu vực nhập liệu bên trái, bảng hiển thị điểm bên phải.
 - Chọn sinh viên và môn học để nhập điểm
-- Nhập các đầu điểm: **Chuyên cần**, **Giữa kỳ**, **Cuối kỳ**
+- Nhập các đầu điểm: **Chuyên cần**, **Cuối kỳ**
 - Tự động tính **điểm trung bình** theo công thức:
   > Điểm TB = (Chuyên cần × 0.4) + (Cuối kỳ × 0.6)
 - Xoá bản ghi điểm của sinh viên
