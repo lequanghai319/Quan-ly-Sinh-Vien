@@ -1,0 +1,13 @@
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\bin\Debug\BTL_66TTNT2.exe.config
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\bin\Debug\BTL_66TTNT2.exe
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\bin\Debug\BTL_66TTNT2.pdb
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.csproj.AssemblyReference.cache
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.Form_dang_nhap.resources
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.Properties.Resources.resources
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.csproj.GenerateResource.cache
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.csproj.CoreCompileInputs.cache
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.exe
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.pdb
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.Form1.resources
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.Quan_ly_sv.resources
+C:\Users\admin\Music\WinForm\BTL_66TTNT2\obj\Debug\BTL_66TTNT2.Thongke.resources
