@@ -20,6 +20,7 @@ namespace BTL_66TTNT2
             InitializeComponent();
             InitializeDataGrid();
             SQLData();
+            LoadSinhVienToComboBox();
         }
 
         private void InitializeDataGrid()
@@ -72,6 +73,42 @@ namespace BTL_66TTNT2
             }
         }
 
+        private void LoadSinhVienToComboBox()
+        {
+            try
+            {
+                string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
+                string query = "SELECT TenSinhVien FROM [dbo].[sinh_vien]";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            comboBoxSV.Items.Clear();
+                            while (reader.Read())
+                            {
+                                if (reader["TenSinhVien"] != DBNull.Value)
+                                {
+                                    comboBoxSV.Items.Add(reader["TenSinhVien"].ToString());
+                                }
+                            }
+                        }
+                    }
+                }
+                if (comboBoxSV.Items.Count > 0)
+                {
+                    comboBoxSV.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách sinh viên: " + ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (dtDiem == null || dtDiem.Rows.Count == 0)
@@ -85,7 +122,7 @@ namespace BTL_66TTNT2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxSV.Text) || string.IsNullOrEmpty(comboBoxMonHoc.Text) || string.IsNullOrEmpty(textBoxChuyenCan.Text) || string.IsNullOrEmpty(textBoxCuoiKi.Text))
+            if (string.IsNullOrEmpty(comboBoxSV.Text) || string.IsNullOrEmpty(comboBoxMonHoc.Text) || string.IsNullOrEmpty(textBoxChuyenCan.Text) || string.IsNullOrEmpty(textBoxCuoiKi.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin bắt buộc");
                 return;
@@ -108,12 +145,10 @@ namespace BTL_66TTNT2
             double DiemTB = ChuyenCan * 0.4 + CuoiKi * 0.6;
             DiemTB = Math.Round(DiemTB, 2);
 
-            dtDiem.Rows.Add(textBoxSV.Text, comboBoxMonHoc.Text, ChuyenCan, CuoiKi, DiemTB);
-
-            textBoxSV.Text = "";
+            dtDiem.Rows.Add(comboBoxSV.Text, comboBoxMonHoc.Text, ChuyenCan, CuoiKi, DiemTB);
             textBoxChuyenCan.Text = "";
             textBoxCuoiKi.Text = "";
-            textBoxSV.Focus();
+            comboBoxSV.Focus();
             MessageBox.Show("Thêm điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -135,15 +170,6 @@ namespace BTL_66TTNT2
                 MessageBox.Show("Vui lòng chọn một dòng dữ liệu hợp lệ trong bảng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void textBoxSV_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
