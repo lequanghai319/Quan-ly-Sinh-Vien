@@ -1,0 +1,6 @@
+CREATE TABLE KhoaHoc (
+    MaKhoaHoc VARCHAR(50) PRIMARY KEY,
+    TenKhoaHoc NVARCHAR(100) NOT NULL,
+    SoTinChi INT,
+    HocKy NVARCHAR(50)
+);
