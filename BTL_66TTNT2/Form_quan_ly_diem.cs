@@ -14,6 +14,7 @@ namespace BTL_66TTNT2
     public partial class Form_QL_Diem : Form
     {
         private DataTable dtDiem;
+        string connectionString = "Data Source=DESKTOP-RPF9QH6;Initial Catalog=Bai_tap_lon;Integrated Security=True";
 
         public Form_QL_Diem()
         {
@@ -21,11 +22,13 @@ namespace BTL_66TTNT2
             InitializeDataGrid();
             SQLData();
             LoadSinhVienToComboBox();
+            LoadMonHocToComboBox();
         }
 
         private void InitializeDataGrid()
         {
             dtDiem = new DataTable();
+            dtDiem.Columns.Add("ID", typeof(int));
             dtDiem.Columns.Add("Họ và tên SV", typeof(string));
             dtDiem.Columns.Add("Môn học", typeof(string));
             dtDiem.Columns.Add("Điểm chuyên cần", typeof(double));
@@ -39,8 +42,7 @@ namespace BTL_66TTNT2
         {
             try
             {
-                string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
-                string query = "SELECT HoTenSV, MonHoc, DiemChuyenCan, DiemCuoiKy, DiemTB FROM DiemSinhVien";
+                string query = "SELECT ID, HoTenSV, MonHoc, DiemChuyenCan, DiemCuoiKy, DiemTB FROM DiemSinhVien";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -56,6 +58,7 @@ namespace BTL_66TTNT2
                             foreach (DataRow row in dtTemp.Rows)
                             {
                                 dtDiem.Rows.Add(
+                                    Convert.ToInt32(row["ID"]),
                                     row["HoTenSV"].ToString(),
                                     row["MonHoc"].ToString(),
                                     row["DiemChuyenCan"] != DBNull.Value ? Convert.ToDouble(row["DiemChuyenCan"]) : 0,
@@ -77,7 +80,6 @@ namespace BTL_66TTNT2
         {
             try
             {
-                string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
                 string query = "SELECT TenSinhVien FROM [dbo].[sinh_vien]";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -91,21 +93,48 @@ namespace BTL_66TTNT2
                             while (reader.Read())
                             {
                                 if (reader["TenSinhVien"] != DBNull.Value)
-                                {
                                     comboBoxSV.Items.Add(reader["TenSinhVien"].ToString());
-                                }
                             }
                         }
                     }
                 }
                 if (comboBoxSV.Items.Count > 0)
-                {
                     comboBoxSV.SelectedIndex = 0;
-                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi tải danh sách sinh viên: " + ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadMonHocToComboBox()
+        {
+            try
+            {
+                string query = "SELECT TenKhoaHoc FROM KhoaHoc";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            comboBoxMonHoc.Items.Clear();
+                            while (reader.Read())
+                            {
+                                if (reader["TenKhoaHoc"] != DBNull.Value)
+                                    comboBoxMonHoc.Items.Add(reader["TenKhoaHoc"].ToString());
+                            }
+                        }
+                    }
+                }
+                if (comboBoxMonHoc.Items.Count > 0)
+                    comboBoxMonHoc.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách môn học: " + ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -145,7 +174,26 @@ namespace BTL_66TTNT2
             double DiemTB = ChuyenCan * 0.4 + CuoiKi * 0.6;
             DiemTB = Math.Round(DiemTB, 2);
 
-            dtDiem.Rows.Add(comboBoxSV.Text, comboBoxMonHoc.Text, ChuyenCan, CuoiKi, DiemTB);
+            try
+            {
+                string query = "INSERT INTO DiemSinhVien (HoTenSV, MonHoc, DiemChuyenCan, DiemCuoiKy, DiemTB) VALUES (N'" + comboBoxSV.Text + "', N'" + comboBoxMonHoc.Text + "', " + ChuyenCan + ", " + CuoiKi + ", " + DiemTB + ")";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lưu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            SQLData();
             textBoxChuyenCan.Text = "";
             textBoxCuoiKi.Text = "";
             comboBoxSV.Focus();
@@ -160,8 +208,30 @@ namespace BTL_66TTNT2
 
                 if (result == DialogResult.Yes)
                 {
-                    int rowIndex = dataGridViewDiem.CurrentRow.Index;
-                    dataGridViewDiem.Rows.RemoveAt(rowIndex);
+                    try
+                    {
+                        int rowIndex = dataGridViewDiem.CurrentRow.Index;
+                        int id = Convert.ToInt32(dtDiem.Rows[rowIndex]["ID"]);
+
+                        string query = "DELETE FROM DiemSinhVien WHERE ID = " + id;
+
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                connection.Open();
+                                command.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi xóa: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    int index = dataGridViewDiem.CurrentRow.Index;
+                    dataGridViewDiem.Rows.RemoveAt(index);
                     MessageBox.Show("Đã xóa bản ghi điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -170,7 +240,16 @@ namespace BTL_66TTNT2
                 MessageBox.Show("Vui lòng chọn một dòng dữ liệu hợp lệ trong bảng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void comboBoxMonHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBoxSV_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
     }

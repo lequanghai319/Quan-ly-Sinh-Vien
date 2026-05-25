@@ -30,11 +30,11 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelTong = new System.Windows.Forms.Panel();
+            this.labelTong = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelNam = new System.Windows.Forms.Panel();
-            this.panelNu = new System.Windows.Forms.Panel();
-            this.labelTong = new System.Windows.Forms.Label();
             this.labelNam = new System.Windows.Forms.Label();
+            this.panelNu = new System.Windows.Forms.Panel();
             this.labelNu = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelTong.SuspendLayout();
@@ -69,6 +69,18 @@
             this.panelTong.Size = new System.Drawing.Size(794, 219);
             this.panelTong.TabIndex = 0;
             // 
+            // labelTong
+            // 
+            this.labelTong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTong.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelTong.ForeColor = System.Drawing.Color.White;
+            this.labelTong.Location = new System.Drawing.Point(0, 0);
+            this.labelTong.Name = "labelTong";
+            this.labelTong.Size = new System.Drawing.Size(794, 219);
+            this.labelTong.TabIndex = 0;
+            this.labelTong.Text = "Tổng số sinh viên:  ";
+            this.labelTong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -94,28 +106,6 @@
             this.panelNam.Size = new System.Drawing.Size(391, 213);
             this.panelNam.TabIndex = 0;
             // 
-            // panelNu
-            // 
-            this.panelNu.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelNu.Controls.Add(this.labelNu);
-            this.panelNu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNu.Location = new System.Drawing.Point(400, 3);
-            this.panelNu.Name = "panelNu";
-            this.panelNu.Size = new System.Drawing.Size(391, 213);
-            this.panelNu.TabIndex = 1;
-            // 
-            // labelTong
-            // 
-            this.labelTong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTong.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTong.ForeColor = System.Drawing.Color.White;
-            this.labelTong.Location = new System.Drawing.Point(0, 0);
-            this.labelTong.Name = "labelTong";
-            this.labelTong.Size = new System.Drawing.Size(794, 219);
-            this.labelTong.TabIndex = 0;
-            this.labelTong.Text = "Tổng số sinh viên:  ";
-            this.labelTong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelNam
             // 
             this.labelNam.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -127,6 +117,16 @@
             this.labelNam.TabIndex = 0;
             this.labelNam.Text = "Nam: ";
             this.labelNam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelNu
+            // 
+            this.panelNu.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelNu.Controls.Add(this.labelNu);
+            this.panelNu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNu.Location = new System.Drawing.Point(400, 3);
+            this.panelNu.Name = "panelNu";
+            this.panelNu.Size = new System.Drawing.Size(391, 213);
+            this.panelNu.TabIndex = 1;
             // 
             // labelNu
             // 
@@ -149,6 +149,7 @@
             this.Name = "Thongke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê sinh viên";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Thongke_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelTong.ResumeLayout(false);

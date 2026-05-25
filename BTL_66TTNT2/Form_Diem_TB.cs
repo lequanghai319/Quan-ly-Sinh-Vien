@@ -13,7 +13,7 @@ namespace BTL_66TTNT2
 {
     public partial class Form_Diem_TB : Form
     {
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-RPF9QH6;Initial Catalog=Bai_tap_lon;Integrated Security=True";
 
         private void TinhVaHienThiDiemTB(DataTable dtGoc)
         {

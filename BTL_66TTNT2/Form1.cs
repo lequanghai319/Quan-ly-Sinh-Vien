@@ -48,5 +48,30 @@ namespace BTL_66TTNT2
                 this.Show();
             }
         }
+
+        private void quảnLýKhóaHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyKhoaHoc qlKH = new frmQuanLyKhoaHoc();
+            qlKH.Show(this);
+        }
+
+        private void inToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInKhoaHoc inKH = new frmInKhoaHoc();
+            inKH.Show(this);
+
+        }
+
+        private void quảnLýĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_QL_Diem qld = new Form_QL_Diem();
+            qld.Show(this);
+        }
+
+        private void thốngKêĐiểmTrungBìnhMônToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Diem_TB dtb = new Form_Diem_TB();
+            dtb.Show(this);
+        }
     }
 }

@@ -62,6 +62,18 @@
     <Compile Include="Form_dang_nhap.Designer.cs">
       <DependentUpon>Form_dang_nhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Diem_TB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Diem_TB.Designer.cs">
+      <DependentUpon>Form_Diem_TB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_quan_ly_diem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_quan_ly_diem.Designer.cs">
+      <DependentUpon>Form_quan_ly_diem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInKhoaHoc_QH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_dang_nhap.resx">
       <DependentUpon>Form_dang_nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Diem_TB.resx">
+      <DependentUpon>Form_Diem_TB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_quan_ly_diem.resx">
+      <DependentUpon>Form_quan_ly_diem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInKhoaHoc_QH.resx">
       <DependentUpon>frmInKhoaHoc_QH.cs</DependentUpon>

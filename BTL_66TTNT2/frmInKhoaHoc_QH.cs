@@ -9,7 +9,7 @@ namespace BTL_66TTNT2
     public partial class frmInKhoaHoc : Form
     {
         // Chuỗi kết nối Database
-        string chuoiKetNoi = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
+        string chuoiKetNoi = "Data Source=DESKTOP-RPF9QH6;Initial Catalog=Bai_tap_lon;Integrated Security=True";
 
         public frmInKhoaHoc()
         {

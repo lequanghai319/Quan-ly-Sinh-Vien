@@ -47,7 +47,7 @@
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(313, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 46);
+            this.label1.Size = new System.Drawing.Size(217, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin Login";
             // 
@@ -168,6 +168,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Form_dang_nhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";

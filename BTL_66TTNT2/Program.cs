@@ -16,7 +16,7 @@ namespace BTL_66TTNT2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQuanLyKhoaHoc());
+            Application.Run(new Form_dang_nhap());
         }
     }
 }

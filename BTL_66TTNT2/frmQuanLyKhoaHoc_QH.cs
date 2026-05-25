@@ -8,14 +8,16 @@ namespace BTL_66TTNT2
     public partial class frmQuanLyKhoaHoc : Form
     {
         // THAY THẾ: Thay "KHOAHOC_DB" bằng tên cơ sở dữ liệu và Data Source bằng tên Server của bạn
-        string chuoiKetNoi = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
+        string chuoiKetNoi = "Data Source=DESKTOP-RPF9QH6;Initial Catalog=Bai_tap_lon;Integrated Security=True";
+
 
         public frmQuanLyKhoaHoc()
         {
             InitializeComponent();
+            
         }
 
-        // Tự động tải toàn bộ danh sách lên DataGridView khi mở form
+        
         private void frmQuanLyKhoaHoc_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -246,6 +248,11 @@ namespace BTL_66TTNT2
         }
 
         private void cboHocKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
