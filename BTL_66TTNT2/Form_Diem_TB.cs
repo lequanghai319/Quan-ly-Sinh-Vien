@@ -17,37 +17,50 @@ namespace BTL_66TTNT2
 
         private void TinhVaHienThiDiemTB(DataTable dtGoc)
         {
-            DataTable dtKetQua = new DataTable();
-            dtKetQua.Columns.Add("Tên môn học", typeof(string));
-            dtKetQua.Columns.Add("Điểm TB", typeof(double));
-
-            var danhSachTBMon = from row in dtGoc.AsEnumerable()
-                                group row by row.Field<string>("MonHoc") into nhomMon
-                                select new
-                                {
-                                    TenMon = nhomMon.Key,
-                                    DiemTBChung = Math.Round(nhomMon.Average(r => Convert.ToDouble(r["DiemTB"])), 2)
-                                };
-
-            foreach (var item in danhSachTBMon)
+            try
             {
-                dtKetQua.Rows.Add(item.TenMon, item.DiemTBChung);
-            }
+                string colMonHoc = dtGoc.Columns.Contains("Môn học") ? "Môn học" : "MonHoc";
+                string colDiemTB = dtGoc.Columns.Contains("Điểm TB") ? "Điểm TB" : "DiemTB";
+                DataTable dtKetQua = new DataTable();
+                dtKetQua.Columns.Add("Tên môn học", typeof(string));
+                dtKetQua.Columns.Add("Điểm TB", typeof(double));
 
-            dataGridView1.DataSource = dtKetQua;
+                var danhSachTBMon = from row in dtGoc.AsEnumerable()
+                                    group row by row.Field<string>(colMonHoc) into nhomMon
+                                    select new
+                                    {
+                                        TenMon = nhomMon.Key,
+                                        DiemTBChung = Math.Round(nhomMon.Average(r => Convert.ToDouble(r[colDiemTB])), 2)
+                                    };
+                foreach (var item in danhSachTBMon)
+                {
+                    dtKetQua.Rows.Add(item.TenMon, item.DiemTBChung);
+                }
+                dataGridView1.DataSource = dtKetQua;
+                dataGridView1.ReadOnly = true;
+                dataGridView1.AllowUserToAddRows = false;
+                dataGridView1.AllowUserToDeleteRows = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra khi tính toán điểm trung bình: " + ex.Message, "Lỗi xử lý", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         public Form_Diem_TB()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             LayDuLieuVaTinhDiemTB();
         }
+
         public Form_Diem_TB(DataTable dtGoc)
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             TinhVaHienThiDiemTB(dtGoc);
         }
+
         private void LayDuLieuVaTinhDiemTB()
         {
             try
@@ -65,11 +78,13 @@ namespace BTL_66TTNT2
                         }
                     }
                 }
+
                 if (dtGoc.Rows.Count == 0)
                 {
-                    MessageBox.Show("Chưa có dữ liệu bản ghi điểm nào trong SQL Server!", "Thông báo");
+                    MessageBox.Show("Chưa có dữ liệu bản ghi điểm nào trong SQL Server!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+
                 TinhVaHienThiDiemTB(dtGoc);
             }
             catch (Exception ex)
@@ -77,9 +92,9 @@ namespace BTL_66TTNT2
                 MessageBox.Show("Lỗi khi lấy dữ liệu từ SQL Server: " + ex.Message, "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
     }
 }
