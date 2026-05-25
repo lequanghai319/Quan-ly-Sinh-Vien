@@ -239,5 +239,10 @@ namespace BTL_66TTNT2
         {
 
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -149,5 +149,10 @@ namespace BTL_66TTNT2
         {
             this.Close();
         }
+
+        private void dgvInKhoaHoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

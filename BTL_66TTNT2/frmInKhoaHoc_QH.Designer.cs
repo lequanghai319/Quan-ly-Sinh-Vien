@@ -39,9 +39,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(8, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 20);
+            this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chọn học kỳ cần in:";
             // 
@@ -53,9 +54,10 @@
             "Học kỳ 1",
             "Học kỳ 2 ",
             "Học kỳ hè"});
-            this.cboLocHocKy.Location = new System.Drawing.Point(164, 6);
+            this.cboLocHocKy.Location = new System.Drawing.Point(109, 4);
+            this.cboLocHocKy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboLocHocKy.Name = "cboLocHocKy";
-            this.cboLocHocKy.Size = new System.Drawing.Size(121, 28);
+            this.cboLocHocKy.Size = new System.Drawing.Size(82, 21);
             this.cboLocHocKy.TabIndex = 1;
             this.cboLocHocKy.SelectedIndexChanged += new System.EventHandler(this.cboLocHocKy_SelectedIndexChanged);
             // 
@@ -65,18 +67,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInKhoaHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInKhoaHoc.Location = new System.Drawing.Point(4, 56);
+            this.dgvInKhoaHoc.Location = new System.Drawing.Point(3, 36);
+            this.dgvInKhoaHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvInKhoaHoc.Name = "dgvInKhoaHoc";
             this.dgvInKhoaHoc.RowHeadersWidth = 62;
             this.dgvInKhoaHoc.RowTemplate.Height = 28;
-            this.dgvInKhoaHoc.Size = new System.Drawing.Size(793, 303);
+            this.dgvInKhoaHoc.Size = new System.Drawing.Size(529, 197);
             this.dgvInKhoaHoc.TabIndex = 2;
+            this.dgvInKhoaHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInKhoaHoc_CellContentClick);
             // 
             // btnXuatExcel
             // 
-            this.btnXuatExcel.Location = new System.Drawing.Point(582, 399);
+            this.btnXuatExcel.Location = new System.Drawing.Point(388, 259);
+            this.btnXuatExcel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXuatExcel.Name = "btnXuatExcel";
-            this.btnXuatExcel.Size = new System.Drawing.Size(108, 39);
+            this.btnXuatExcel.Size = new System.Drawing.Size(72, 25);
             this.btnXuatExcel.TabIndex = 3;
             this.btnXuatExcel.Text = "Xuất_Excel";
             this.btnXuatExcel.UseVisualStyleBackColor = true;
@@ -84,9 +89,10 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(713, 399);
+            this.btnDong.Location = new System.Drawing.Point(475, 259);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(75, 39);
+            this.btnDong.Size = new System.Drawing.Size(50, 25);
             this.btnDong.TabIndex = 4;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
@@ -94,14 +100,15 @@
             // 
             // frmInKhoaHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnXuatExcel);
             this.Controls.Add(this.dgvInKhoaHoc);
             this.Controls.Add(this.cboLocHocKy);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmInKhoaHoc";
             this.Text = "frmInKhoaHoc_QH";
             this.Load += new System.EventHandler(this.frmInKhoaHoc_Load);

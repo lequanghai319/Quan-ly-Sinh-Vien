@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|d:\\mine\\study\\laptrinhwindows\\quan-ly-sinh-vien\\btl_66ttnt2\\frminkhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frminkhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:frminkhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|d:\\mine\\study\\laptrinhwindows\\quan-ly-sinh-vien\\btl_66ttnt2\\frmquanlykhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:frmquanlykhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmInKhoaHoc_QH.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:frmInKhoaHoc_QH.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|d:\\mine\\study\\laptrinhwindows\\quan-ly-sinh-vien\\btl_66ttnt2\\frminkhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:frminkhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form_dang_nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:Form_dang_nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Quan_ly_sv.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:Quan_ly_sv.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|d:\\mine\\study\\laptrinhwindows\\quan-ly-sinh-vien\\btl_66ttnt2\\frmquanlykhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:frmquanlykhoahoc_qh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\quan_ly_sv.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:quan_ly_sv.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|d:\\mine\\study\\laptrinhwindows\\quan-ly-sinh-vien\\btl_66ttnt2\\form_dang_nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:form_dang_nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\quan_ly_sv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:quan_ly_sv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\form_dang_nhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:form_dang_nhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\quan_ly_sv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -47,28 +31,28 @@
       "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:form_dang_nhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\thongke.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:thongke.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:Thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Thongke.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC5FE54-BA3D-488C-A176-F539D87007FF}|BTL_66TTNT2.csproj|solutionrelative:Thongke.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmInKhoaHoc_QH.cs [Design]",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmInKhoaHoc_QH.cs",
               "RelativeDocumentMoniker": "frmInKhoaHoc_QH.cs",
@@ -91,45 +75,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T16:21:07.778Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T08:22:30.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmQuanLyKhoaHoc_QH.cs",
-              "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmQuanLyKhoaHoc_QH.cs",
-              "RelativeDocumentMoniker": "frmQuanLyKhoaHoc_QH.cs",
-              "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmQuanLyKhoaHoc_QH.cs",
-              "RelativeToolTip": "frmQuanLyKhoaHoc_QH.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T15:36:13.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmInKhoaHoc_QH.cs",
-              "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmInKhoaHoc_QH.cs",
-              "RelativeDocumentMoniker": "frmInKhoaHoc_QH.cs",
-              "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmInKhoaHoc_QH.cs",
-              "RelativeToolTip": "frmInKhoaHoc_QH.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAArwJcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T16:27:28.239Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -145,7 +90,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "frmInKhoaHoc_QH.cs",
+              "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmInKhoaHoc_QH.cs",
+              "RelativeDocumentMoniker": "frmInKhoaHoc_QH.cs",
+              "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\frmInKhoaHoc_QH.cs",
+              "RelativeToolTip": "frmInKhoaHoc_QH.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAtwJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:27:28.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Quan_ly_sv.Designer.cs",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Quan_ly_sv.Designer.cs",
               "RelativeDocumentMoniker": "Quan_ly_sv.Designer.cs",
@@ -158,46 +116,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Form_dang_nhap.cs",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form_dang_nhap.cs",
               "RelativeDocumentMoniker": "Form_dang_nhap.cs",
               "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form_dang_nhap.cs",
               "RelativeToolTip": "Form_dang_nhap.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAIA6wGQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAjwGQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T15:53:49.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Quan_ly_sv.cs",
-              "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Quan_ly_sv.cs",
-              "RelativeDocumentMoniker": "Quan_ly_sv.cs",
-              "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Quan_ly_sv.cs",
-              "RelativeToolTip": "Quan_ly_sv.cs",
-              "ViewState": "AgIAAOEAAAAAAAAAAAArwPMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T08:04:58.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form_dang_nhap.Designer.cs",
-              "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form_dang_nhap.Designer.cs",
-              "RelativeDocumentMoniker": "Form_dang_nhap.Designer.cs",
-              "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form_dang_nhap.Designer.cs",
-              "RelativeToolTip": "Form_dang_nhap.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T16:24:48.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Quan_ly_sv.cs [Design]",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Quan_ly_sv.cs",
               "RelativeDocumentMoniker": "Quan_ly_sv.cs",
@@ -209,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Form_dang_nhap.cs [Design]",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form_dang_nhap.cs",
               "RelativeDocumentMoniker": "Form_dang_nhap.cs",
@@ -221,19 +153,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T15:39:24.584Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-18T15:39:24.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -241,24 +172,22 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T15:39:22.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T15:39:22.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "Thongke.cs [Design]",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Thongke.cs",
               "RelativeDocumentMoniker": "Thongke.cs",
               "ToolTip": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Thongke.cs [Design]",
               "RelativeToolTip": "Thongke.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T09:39:58.467Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-19T09:39:58.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -266,12 +195,11 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T15:59:34.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T15:59:34.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
               "Title": "Thongke.cs",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Thongke.cs",
               "RelativeDocumentMoniker": "Thongke.cs",
@@ -279,12 +207,11 @@
               "RelativeToolTip": "Thongke.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T09:41:25.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T09:41:25.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 12,
               "Title": "Thongke.Designer.cs",
               "DocumentMoniker": "D:\\Mine\\Study\\laptrinhwindows\\Quan-ly-Sinh-Vien\\BTL_66TTNT2\\Thongke.Designer.cs",
               "RelativeDocumentMoniker": "Thongke.Designer.cs",
@@ -292,8 +219,7 @@
               "RelativeToolTip": "Thongke.Designer.cs",
               "ViewState": "AgIAAI8AAAAAAAAAAAAkwJkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T07:02:28.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T07:02:28.397Z"
             }
           ]
         }
