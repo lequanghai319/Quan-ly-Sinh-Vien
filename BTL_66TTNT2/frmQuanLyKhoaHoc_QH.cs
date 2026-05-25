@@ -8,7 +8,7 @@ namespace BTL_66TTNT2
     public partial class frmQuanLyKhoaHoc : Form
     {
         // THAY THẾ: Thay "KHOAHOC_DB" bằng tên cơ sở dữ liệu và Data Source bằng tên Server của bạn
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=BaiHocDauTien;Integrated Security=True";
+        string chuoiKetNoi = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
 
         public frmQuanLyKhoaHoc()
         {
@@ -27,7 +27,7 @@ namespace BTL_66TTNT2
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
                 {
                     conn.Open();
                     string query = "SELECT MaKhoaHoc AS [Mã Khóa Học], TenKhoaHoc AS [Tên Khóa Học], SoTinChi AS [Số Tín Chỉ], HocKy AS [Học Kỳ] FROM KhoaHoc";
@@ -67,7 +67,7 @@ namespace BTL_66TTNT2
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
                 {
                     conn.Open();
                     string query = "INSERT INTO KhoaHoc (MaKhoaHoc, TenKhoaHoc, SoTinChi, HocKy) VALUES (@Ma, @Ten, @TinChi, @HocKy)";
@@ -103,7 +103,7 @@ namespace BTL_66TTNT2
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
                 {
                     conn.Open();
                     // Chỉ cập nhật Tên, Số tín chỉ, Học kỳ theo đúng Mã khóa học
@@ -145,7 +145,7 @@ namespace BTL_66TTNT2
             {
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
                     {
                         conn.Open();
                         string query = "DELETE FROM KhoaHoc WHERE MaKhoaHoc = @Ma";
@@ -172,7 +172,7 @@ namespace BTL_66TTNT2
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
                 {
                     conn.Open();
                     string query = "SELECT MaKhoaHoc AS [Mã Khóa Học], TenKhoaHoc AS [Tên Khóa Học], SoTinChi AS [Số Tín Chỉ], HocKy AS [Học Kỳ] FROM KhoaHoc WHERE TenKhoaHoc LIKE @TenSearch";
@@ -241,6 +241,11 @@ namespace BTL_66TTNT2
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cboHocKy_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

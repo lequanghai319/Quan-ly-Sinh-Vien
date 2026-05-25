@@ -9,7 +9,7 @@ namespace BTL_66TTNT2
     public partial class frmInKhoaHoc : Form
     {
         // Chuỗi kết nối Database
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=BaiHocDauTien;Integrated Security=True";
+        string chuoiKetNoi = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
 
         public frmInKhoaHoc()
         {
@@ -31,7 +31,7 @@ namespace BTL_66TTNT2
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
                 {
                     conn.Open();
                     string query = "";
