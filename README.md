@@ -111,18 +111,6 @@ Hệ thống sử dụng SQL Server với các bảng chính:
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt
-
-**Yêu cầu:** Visual Studio 2019/2022 · SQL Server Express · .NET Framework 4.7+
-
-1. Mở **SQL Server Management Studio**, chạy file `Database/QuanLySinhVien.sql` để tạo database và dữ liệu mẫu
-2. Mở file `QuanLySinhVien.sln` bằng Visual Studio
-3. Trong file `DatabaseHelper.cs`, sửa `connectionString` cho đúng tên SQL Server instance trên máy bạn
-4. Nhấn `F5` để chạy chương trình
-5. Đăng nhập mặc định: **Tên đăng nhập:** `admin` · **Mật khẩu:** `123456`
-
----
-
 ## 📁 Cấu Trúc Dự Án
 
 ```
