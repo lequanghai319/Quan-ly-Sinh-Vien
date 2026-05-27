@@ -75,8 +75,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvKhoaHoc);
-            this.splitContainer1.Size = new System.Drawing.Size(711, 359);
-            this.splitContainer1.SplitterDistance = 235;
+            this.splitContainer1.Size = new System.Drawing.Size(800, 449);
+            this.splitContainer1.SplitterDistance = 264;
             this.splitContainer1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -92,13 +92,13 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSua, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnTimKiem, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnXoa, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 233);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 291);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(226, 123);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(254, 154);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -108,7 +108,7 @@
             this.btnThem.Location = new System.Drawing.Point(3, 2);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 57);
+            this.btnThem.Size = new System.Drawing.Size(95, 73);
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -117,10 +117,10 @@
             // btnLamMoi
             // 
             this.btnLamMoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLamMoi.Location = new System.Drawing.Point(93, 63);
+            this.btnLamMoi.Location = new System.Drawing.Point(104, 79);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(76, 58);
+            this.btnLamMoi.Size = new System.Drawing.Size(86, 73);
             this.btnLamMoi.TabIndex = 12;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
@@ -129,10 +129,10 @@
             // btnSua
             // 
             this.btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSua.Location = new System.Drawing.Point(93, 2);
+            this.btnSua.Location = new System.Drawing.Point(104, 2);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(76, 57);
+            this.btnSua.Size = new System.Drawing.Size(86, 73);
             this.btnSua.TabIndex = 9;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -141,10 +141,10 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTimKiem.Location = new System.Drawing.Point(3, 63);
+            this.btnTimKiem.Location = new System.Drawing.Point(3, 79);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(84, 58);
+            this.btnTimKiem.Size = new System.Drawing.Size(95, 73);
             this.btnTimKiem.TabIndex = 11;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -153,10 +153,10 @@
             // btnXoa
             // 
             this.btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnXoa.Location = new System.Drawing.Point(175, 2);
+            this.btnXoa.Location = new System.Drawing.Point(196, 2);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(48, 57);
+            this.btnXoa.Size = new System.Drawing.Size(55, 73);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -171,10 +171,10 @@
             "Học kỳ 1",
             "Học kỳ 2 ",
             "Học kỳ 3"});
-            this.cboHocKy.Location = new System.Drawing.Point(105, 94);
+            this.cboHocKy.Location = new System.Drawing.Point(118, 118);
             this.cboHocKy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboHocKy.Name = "cboHocKy";
-            this.cboHocKy.Size = new System.Drawing.Size(106, 24);
+            this.cboHocKy.Size = new System.Drawing.Size(119, 28);
             this.cboHocKy.TabIndex = 7;
             this.cboHocKy.SelectedIndexChanged += new System.EventHandler(this.cboHocKy_SelectedIndexChanged);
             // 
@@ -182,67 +182,68 @@
             // 
             this.numSoTinChi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numSoTinChi.Location = new System.Drawing.Point(105, 69);
+            this.numSoTinChi.Location = new System.Drawing.Point(118, 86);
             this.numSoTinChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numSoTinChi.Name = "numSoTinChi";
-            this.numSoTinChi.Size = new System.Drawing.Size(105, 22);
+            this.numSoTinChi.Size = new System.Drawing.Size(118, 26);
             this.numSoTinChi.TabIndex = 6;
             // 
             // txtTenKhoaHoc
             // 
             this.txtTenKhoaHoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTenKhoaHoc.Location = new System.Drawing.Point(105, 42);
+            this.txtTenKhoaHoc.Location = new System.Drawing.Point(118, 52);
             this.txtTenKhoaHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenKhoaHoc.Name = "txtTenKhoaHoc";
-            this.txtTenKhoaHoc.Size = new System.Drawing.Size(105, 22);
+            this.txtTenKhoaHoc.Size = new System.Drawing.Size(118, 26);
             this.txtTenKhoaHoc.TabIndex = 5;
+            this.txtTenKhoaHoc.TextChanged += new System.EventHandler(this.txtTenKhoaHoc_TextChanged);
             // 
             // txtMaKhoaHoc
             // 
             this.txtMaKhoaHoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMaKhoaHoc.Location = new System.Drawing.Point(105, 18);
+            this.txtMaKhoaHoc.Location = new System.Drawing.Point(118, 22);
             this.txtMaKhoaHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaKhoaHoc.Name = "txtMaKhoaHoc";
-            this.txtMaKhoaHoc.Size = new System.Drawing.Size(105, 22);
+            this.txtMaKhoaHoc.Size = new System.Drawing.Size(118, 26);
             this.txtMaKhoaHoc.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 92);
+            this.label4.Location = new System.Drawing.Point(12, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Học kỳ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 66);
+            this.label3.Location = new System.Drawing.Point(12, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số tín chỉ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 41);
+            this.label2.Location = new System.Drawing.Point(12, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Tên khoá học";
+            this.label2.Text = "Tên môn học";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 18);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 16);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã khoá học";
+            this.label1.Text = "Mã môn học";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvKhoaHoc
@@ -257,21 +258,21 @@
             this.dgvKhoaHoc.Name = "dgvKhoaHoc";
             this.dgvKhoaHoc.RowHeadersWidth = 62;
             this.dgvKhoaHoc.RowTemplate.Height = 28;
-            this.dgvKhoaHoc.Size = new System.Drawing.Size(472, 359);
+            this.dgvKhoaHoc.Size = new System.Drawing.Size(532, 449);
             this.dgvKhoaHoc.TabIndex = 0;
             this.dgvKhoaHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoaHoc_CellClick);
             this.dgvKhoaHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoaHoc_CellContentClick);
             // 
             // frmQuanLyKhoaHoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 359);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmQuanLyKhoaHoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmQuanLyKhoaHoc_QH";
+            this.Text = "frmQuanLyMonHoc_QH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

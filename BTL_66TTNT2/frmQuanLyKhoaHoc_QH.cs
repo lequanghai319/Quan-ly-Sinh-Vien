@@ -7,216 +7,251 @@ namespace BTL_66TTNT2
 {
     public partial class frmQuanLyKhoaHoc : Form
     {
-        // THAY THẾ: Thay "KHOAHOC_DB" bằng tên cơ sở dữ liệu và Data Source bằng tên Server của bạn
-        string chuoiKetNoi = "Data Source=DESKTOP-RPF9QH6;Initial Catalog=Bai_tap_lon;Integrated Security=True";
-
+        SqlConnection connection;
+        string query;
+        SqlCommand cmd;
+        SqlDataAdapter adapter;
+        DataTable dt;
+        string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Bai_tap_lon;Integrated Security=True";
 
         public frmQuanLyKhoaHoc()
         {
             InitializeComponent();
-            
         }
 
-        
+        //LOAD FORM
         private void frmQuanLyKhoaHoc_Load(object sender, EventArgs e)
         {
             LoadData();
             SetDefaultComboBox();
         }
 
-        // Hàm bổ trợ: Tải dữ liệu từ SQL Server vào DataGridView
+        //HÀM TẢI DỮ LIỆU LÊN BẢNG
         private void LoadData()
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
-                {
-                    conn.Open();
-                    string query = "SELECT MaKhoaHoc AS [Mã Khóa Học], TenKhoaHoc AS [Tên Khóa Học], SoTinChi AS [Số Tín Chỉ], HocKy AS [Học Kỳ] FROM KhoaHoc";
+                connection = new SqlConnection(connectionString);
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
 
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        dgvKhoaHoc.DataSource = dt;
-                    }
-                }
+                // Cột SQL là KhoaHoc nhưng hiển thị lên UI là Môn Học
+                query = "SELECT MaKhoaHoc AS [Mã Môn Học], TenKhoaHoc AS [Tên Môn Học], SoTinChi AS [Số Tín Chỉ], HocKy AS [Học Kỳ] FROM KhoaHoc";
+
+                cmd = new SqlCommand(query, connection);
+                adapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                dgvKhoaHoc.DataSource = dt;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi tải danh sách khóa học: " + ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi khi tải danh sách môn học: " + ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connection != null && connection.State != ConnectionState.Closed)
+                    connection.Close();
             }
         }
 
-        // Hàm bổ trợ: Đưa ComboBox học kỳ về giá trị mặc định đầu tiên
         private void SetDefaultComboBox()
         {
             if (cboHocKy.Items.Count > 0)
             {
-                cboHocKy.SelectedIndex = 0; // Chọn mục đầu tiên trong danh sách
+                cboHocKy.SelectedIndex = 0;
             }
         }
 
-        // Chức năng: Thêm khóa học mới
+        //NÚT THÊM
         private void btnThem_Click(object sender, EventArgs e)
         {
-            // Kiểm tra không để trống các trường thông tin bắt buộc
             if (string.IsNullOrWhiteSpace(txtMaKhoaHoc.Text) || string.IsNullOrWhiteSpace(txtTenKhoaHoc.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ Mã khóa học và Tên khóa học!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ Mã môn học và Tên môn học!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
+                connection = new SqlConnection(connectionString);
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
+
+                query = "INSERT INTO KhoaHoc (MaKhoaHoc, TenKhoaHoc, SoTinChi, HocKy) VALUES (@Ma, @Ten, @TinChi, @HocKy)";
+                cmd = new SqlCommand(query, connection);
+
+                cmd.Parameters.AddWithValue("@Ma", txtMaKhoaHoc.Text.Trim());
+                cmd.Parameters.AddWithValue("@Ten", txtTenKhoaHoc.Text.Trim());
+                cmd.Parameters.AddWithValue("@TinChi", numSoTinChi.Value);
+                cmd.Parameters.AddWithValue("@HocKy", cboHocKy.Text);
+
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
                 {
-                    conn.Open();
-                    string query = "INSERT INTO KhoaHoc (MaKhoaHoc, TenKhoaHoc, SoTinChi, HocKy) VALUES (@Ma, @Ten, @TinChi, @HocKy)";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Ma", txtMaKhoaHoc.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Ten", txtTenKhoaHoc.Text.Trim());
-                        cmd.Parameters.AddWithValue("@TinChi", numSoTinChi.Value);
-                        cmd.Parameters.AddWithValue("@HocKy", cboHocKy.Text);
-
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Thêm khóa học mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        btnLamMoi_Click(sender, e); // Thêm xong tự làm sạch form
-                    }
+                    MessageBox.Show("Thêm môn học mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLamMoi_Click(sender, e);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Không thể thêm khóa học. Lỗi: " + ex.Message, "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể thêm môn học. Lỗi: " + ex.Message, "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connection != null && connection.State != ConnectionState.Closed)
+                    connection.Close();
             }
         }
 
-        // Chức năng: Sửa thông tin khóa học
+        //NÚT SỬA
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtMaKhoaHoc.Text))
             {
-                MessageBox.Show("Vui lòng chọn một khóa học từ bảng để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một môn học từ bảng để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
+                connection = new SqlConnection(connectionString);
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
+
+                query = "UPDATE KhoaHoc SET TenKhoaHoc = @Ten, SoTinChi = @TinChi, HocKy = @HocKy WHERE MaKhoaHoc = @Ma";
+                cmd = new SqlCommand(query, connection);
+
+                cmd.Parameters.AddWithValue("@Ma", txtMaKhoaHoc.Text.Trim());
+                cmd.Parameters.AddWithValue("@Ten", txtTenKhoaHoc.Text.Trim());
+                cmd.Parameters.AddWithValue("@TinChi", numSoTinChi.Value);
+                cmd.Parameters.AddWithValue("@HocKy", cboHocKy.Text);
+
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
                 {
-                    conn.Open();
-                    // Chỉ cập nhật Tên, Số tín chỉ, Học kỳ theo đúng Mã khóa học
-                    string query = "UPDATE KhoaHoc SET TenKhoaHoc = @Ten, SoTinChi = @TinChi, HocKy = @HocKy WHERE MaKhoaHoc = @Ma";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Ma", txtMaKhoaHoc.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Ten", txtTenKhoaHoc.Text.Trim());
-                        cmd.Parameters.AddWithValue("@TinChi", numSoTinChi.Value);
-                        cmd.Parameters.AddWithValue("@HocKy", cboHocKy.Text);
-
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật thông tin khóa học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        btnLamMoi_Click(sender, e);
-                    }
+                    MessageBox.Show("Cập nhật thông tin môn học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLamMoi_Click(sender, e);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi cập nhật dữ liệu: " + ex.Message, "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                if (connection != null && connection.State != ConnectionState.Closed)
+                    connection.Close();
+            }
         }
 
-        // Chức năng: Xóa khóa học
+        //NÚT XÓA
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtMaKhoaHoc.Text))
             {
-                MessageBox.Show("Vui lòng chọn một khóa học cần xóa khỏi hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một môn học cần xóa khỏi hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Hiển thị hộp thoại xác nhận Yes/No trước khi xóa dữ liệu
-            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa khóa học có mã [{txtMaKhoaHoc.Text}] không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa môn học có mã [{txtMaKhoaHoc.Text}] không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
+                    connection = new SqlConnection(connectionString);
+                    if (connection.State == ConnectionState.Closed)
+                        connection.Open();
+
+                    query = "DELETE FROM KhoaHoc WHERE MaKhoaHoc = @Ma";
+                    cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@Ma", txtMaKhoaHoc.Text.Trim());
+
+                    int rows = cmd.ExecuteNonQuery();
+
+                    if (rows > 0)
                     {
-                        conn.Open();
-                        string query = "DELETE FROM KhoaHoc WHERE MaKhoaHoc = @Ma";
-
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@Ma", txtMaKhoaHoc.Text.Trim());
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Xóa khóa học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            btnLamMoi_Click(sender, e);
-                        }
+                        MessageBox.Show("Xóa môn học thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnLamMoi_Click(sender, e);
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi khi xóa dữ liệu: " + ex.Message, "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                finally
+                {
+                    if (connection != null && connection.State != ConnectionState.Closed)
+                        connection.Close();
+                }
             }
         }
 
-        // Chức năng: Tìm kiếm theo tên sử dụng từ khóa LIKE
+        //NÚT TÌM KIẾM
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            string keyword = txtTenKhoaHoc.Text.Trim();
+
+            if (keyword == "")
+            {
+                LoadData();
+                return;
+            }
+
             try
             {
-                using (SqlConnection conn = new SqlConnection(chuoiKetNoi))
+                connection = new SqlConnection(connectionString);
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
+
+                query = "SELECT MaKhoaHoc AS [Mã Môn Học], TenKhoaHoc AS [Tên Môn Học], SoTinChi AS [Số Tín Chỉ], HocKy AS [Học Kỳ] FROM KhoaHoc WHERE TenKhoaHoc LIKE @TenSearch";
+
+                cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@TenSearch", "%" + keyword + "%");
+
+                adapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                dgvKhoaHoc.DataSource = dt;
+
+                if (dt.Rows.Count == 0)
                 {
-                    conn.Open();
-                    string query = "SELECT MaKhoaHoc AS [Mã Khóa Học], TenKhoaHoc AS [Tên Khóa Học], SoTinChi AS [Số Tín Chỉ], HocKy AS [Học Kỳ] FROM KhoaHoc WHERE TenKhoaHoc LIKE @TenSearch";
-
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
-                    {
-                        // Từ khóa dạng %chuỗi_tìm_kiếm% phục vụ câu lệnh LIKE
-                        adapter.SelectCommand.Parameters.AddWithValue("@TenSearch", "%" + txtTenKhoaHoc.Text.Trim() + "%");
-
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        dgvKhoaHoc.DataSource = dt;
-                    }
+                    MessageBox.Show("Không tìm thấy môn học nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                if (connection != null && connection.State != ConnectionState.Closed)
+                    connection.Close();
+            }
         }
 
-        // Chức năng: Làm mới ô nhập liệu, đưa ComboBox về mặc định, mở khóa ô Mã
+        //NÚT LÀM MỚI
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             txtMaKhoaHoc.Clear();
             txtTenKhoaHoc.Clear();
-            numSoTinChi.Value = numSoTinChi.Minimum; // Đưa về giá trị nhỏ nhất (thường là 0)
+            numSoTinChi.Value = numSoTinChi.Minimum;
             SetDefaultComboBox();
 
-            txtMaKhoaHoc.Enabled = true; // Mở khóa ô mã để sẵn sàng thêm mới
-            LoadData(); // Tải lại toàn bộ bảng
+            txtMaKhoaHoc.Enabled = true;
+            LoadData();
         }
 
-        // Sự kiện: Click vào một dòng trên bảng DataGridView -> Tự động điền dữ liệu lên Form
+        //CLICK VÀO DÒNG TRÊN GRID
         private void dgvKhoaHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Kiểm tra xem người dùng có click vào dòng dữ liệu hợp lệ không (tránh click vào hàng tiêu đề)
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvKhoaHoc.Rows[e.RowIndex];
 
-                // Điền dữ liệu từ các cột tương ứng lên các điều khiển nhập liệu
                 txtMaKhoaHoc.Text = row.Cells[0].Value?.ToString();
                 txtTenKhoaHoc.Text = row.Cells[1].Value?.ToString();
 
@@ -227,34 +262,15 @@ namespace BTL_66TTNT2
 
                 cboHocKy.Text = row.Cells[3].Value?.ToString();
 
-                // Khóa ô Mã khóa học để không cho phép sửa thông tin định danh này
                 txtMaKhoaHoc.Enabled = false;
             }
         }
 
-        private void dgvKhoaHoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cboHocKy_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void dgvKhoaHoc_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
+        private void cboHocKy_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void label5_Click(object sender, EventArgs e) { }
+        private void txtTenKhoaHoc_TextChanged(object sender, EventArgs e) { }
     }
 }
